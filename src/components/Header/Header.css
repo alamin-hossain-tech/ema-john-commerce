@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: #1c2b35;
+  align-items: center;
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+nav ul li a:hover {
+  color: #ff9900;
+}
