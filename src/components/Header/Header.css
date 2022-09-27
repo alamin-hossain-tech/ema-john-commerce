@@ -5,6 +5,8 @@ header {
   background-color: #1c2b35;
   align-items: center;
   height: 80px;
+  /* position: sticky;
+  top: 0; */
 }
 
 nav ul {
@@ -24,4 +26,10 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #ff9900;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
