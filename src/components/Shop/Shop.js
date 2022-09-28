@@ -64,6 +64,13 @@ const Shop = () => {
     setCart(newCart);
     addToDb(selectedProduct.id);
   };
+
+  const deleteShoppingCart = () => {
+    localStorage.removeItem("shopping-cart");
+    // window.location.reload(false);
+    // let newCart = [];
+    setCart([]);
+  };
   return (
     <div className="shop-container">
       <div className="products-display">
@@ -73,13 +80,14 @@ const Shop = () => {
               product={product}
               key={product.id}
               addToCart={addToCart}
+              deleteShoppingCart={deleteShoppingCart}
             ></Product>
           ))}
         </div>
         {/* <h1>Shop Archiever</h1> */}
       </div>
       <div className="shop-summery">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}></Cart>
       </div>
     </div>
   );

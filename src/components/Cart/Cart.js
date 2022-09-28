@@ -1,8 +1,8 @@
 import React from "react";
-import { deleteShoppingCart } from "../../utilities/fakedb";
+
 import "./Cart.css";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, deleteShoppingCart }) => {
   let total = 0;
   let shipping = 0;
   let tax = 0;
