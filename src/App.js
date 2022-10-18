@@ -1,12 +1,29 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
+import Orders from "./components/Orders/Orders";
 import Shop from "./components/Shop/Shop";
+import Main from "./layouts/Main";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children: [
+        {
+          path: "/",
+          element: <Shop></Shop>,
+        },
+        {
+          path: "/orders",
+          element: <Orders></Orders>,
+        },
+      ],
+    },
+  ]);
   return (
     <div className="App">
-      <Header></Header>
-      <Shop></Shop>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
