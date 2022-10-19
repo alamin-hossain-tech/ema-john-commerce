@@ -12,9 +12,9 @@
   font-weight: 500;
 }
 
-.cart-info {
+/* .cart-info {
   margin: 30px 0px 0px 30px;
-}
+} */
 
 .cart-info p {
   font-size: 18px;
@@ -31,7 +31,17 @@
   font-weight: 700;
   color: #fff;
 }
+.btn-clear a {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
 .btn-clear:hover {
   background-color: red;
   cursor: pointer;
 }
+
+/* .cart-btn-flex {
+  display: flex;
+  gap: 10px;
+} */

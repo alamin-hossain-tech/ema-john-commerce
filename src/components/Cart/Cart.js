@@ -2,7 +2,9 @@ import React from "react";
 
 import "./Cart.css";
 
-const Cart = ({ cart, deleteShoppingCart }) => {
+const Cart = (props) => {
+  const { cart, deleteShoppingCart, children } = props;
+  console.log(children);
   let total = 0;
   let shipping = 0;
   let tax = 0;
@@ -29,10 +31,11 @@ const Cart = ({ cart, deleteShoppingCart }) => {
           <p>Tax: {tax}</p>
           <h4>Grand Total: {grandTotal}</h4>
         </div>
-        <div className="cart-info">
+        <div className="cart-info cart-btn-flex">
           <button className="btn-clear" onClick={deleteShoppingCart}>
             Clear Cart
           </button>
+          {children}
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import { addToDb, getStoredCart } from "../../utilities/fakedb";
+import { Link, useLoaderData } from "react-router-dom";
+import { addToDb, getStoredCart, removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
+import ReviewItem from "../ReviewItem/ReviewItem";
 import "./Shop.css";
 
 const Shop = () => {
@@ -66,6 +67,14 @@ const Shop = () => {
     // let newCart = [];
     setCart([]);
   };
+  const deleteItem = (id) => {
+    const remainingCart = cart.filter((product) => product.id !== id);
+    removeFromDb(id);
+    setCart(remainingCart);
+  };
+  function element_do(my_element, what_to_do) {
+    document.getElementById(my_element).style.display = what_to_do;
+  }
   return (
     <div className="shop-container">
       <div className="products-display">
@@ -81,7 +90,28 @@ const Shop = () => {
         </div>
       </div>
       <div className="shop-summery">
-        <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}></Cart>
+        <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}>
+          <div
+            className="orders-container-shop"
+            style={{ marginTop: "20px", marginBottom: "20px" }}
+          >
+            {cart.map((product) => (
+              <ReviewItem
+                key={product.id}
+                product={product}
+                deleteItem={deleteItem}
+              ></ReviewItem>
+            ))}
+            {/* {cart.length === 0 && element_do("orders-container-shop", "none")} */}
+          </div>
+          {
+            <Link to="/orders">
+              <button className="btn-clear" style={{ marginTop: "10px" }}>
+                Proceed to checkout
+              </button>
+            </Link>
+          }
+        </Cart>
       </div>
     </div>
   );
