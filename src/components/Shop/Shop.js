@@ -72,9 +72,7 @@ const Shop = () => {
     removeFromDb(id);
     setCart(remainingCart);
   };
-  function element_do(my_element, what_to_do) {
-    document.getElementById(my_element).style.display = what_to_do;
-  }
+
   return (
     <div className="shop-container">
       <div className="products-display">
