@@ -1,15 +1,17 @@
 .shop-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
 .products-display {
   margin: 0px auto;
-  width: 80%;
+  /* width: 80%; */
+  /* height: 100vh; */
 }
 .shop-summery {
-  width: 20%;
+  /* width: 20%; */
   background-color: rgba(255, 153, 0, 0.3);
-  overflow: hidden;
+  /* overflow: hidden; */
   /* text-align: center; */
   position: -webkit-sticky;
   position: sticky;

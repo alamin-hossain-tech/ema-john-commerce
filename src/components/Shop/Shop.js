@@ -79,7 +79,6 @@ const Shop = () => {
             ></Product>
           ))}
         </div>
-        {/* <h1>Shop Archiever</h1> */}
       </div>
       <div className="shop-summery">
         <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}></Cart>

@@ -1,0 +1,31 @@
+.review-box {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  column-gap: 15px;
+  align-items: center;
+}
+.review-img {
+  /* width: 30%; */
+}
+.review-img img {
+  width: 80px;
+}
+
+.review-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 70%; */
+}
+.review-info h3,
+.review-info h4,
+.review-info p {
+  margin: 0;
+}
+
+.review-product-info {
+}
