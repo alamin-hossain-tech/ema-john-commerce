@@ -8,7 +8,9 @@ const Header = () => {
     <div className="sticky-header">
       <header>
         <div>
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
         </div>
         <div>
           <nav>
@@ -17,16 +19,13 @@ const Header = () => {
                 <Link to="/">Shop</Link>
               </li>
               <li>
-                <a href="/about">About</a>
+                <Link to="/orders">Orders</Link>
               </li>
               <li>
-                <Link to="/orders">Order</Link>
+                <a href="/inventory">Inventory</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
-              </li>
-              <li>
-                <a href="/login">Login</a>
+                <Link to="/about">About</Link>
               </li>
             </ul>
           </nav>
