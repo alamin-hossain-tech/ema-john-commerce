@@ -90,7 +90,11 @@ const Shop = () => {
       <div className="shop-summery">
         <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}>
           <div
-            className="orders-container-shop"
+            className={
+              cart.length === 0
+                ? "hidden-orders-container"
+                : "orders-container-shop"
+            }
             style={{ marginTop: "20px", marginBottom: "20px" }}
           >
             {cart.map((product) => (
