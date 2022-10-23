@@ -39,7 +39,15 @@ const Orders = () => {
         </div>
       </div>
       <div className="shop-summery">
-        <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}></Cart>
+        <Cart cart={cart} deleteShoppingCart={deleteShoppingCart}>
+          {
+            <Link to="/orders">
+              <button className="btn-clear" style={{ marginTop: "10px" }}>
+                Preceed to Shipping
+              </button>
+            </Link>
+          }
+        </Cart>
       </div>
     </div>
   );
