@@ -5,7 +5,7 @@ import "./ReviewItem.css";
 
 const ReviewItem = ({ product, deleteItem }) => {
   console.log(product);
-  const { name, price, quantity, img, id } = product;
+  const { name, price, quantity, img, _id } = product;
   return (
     <div className="review-box">
       <div className="review-img">
@@ -18,7 +18,7 @@ const ReviewItem = ({ product, deleteItem }) => {
           <p>Quantity:{quantity}</p>
         </div>
         <div className="review-remove-box">
-          <button onClick={() => deleteItem(id)}>
+          <button onClick={() => deleteItem(_id)}>
             <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
           </button>
         </div>

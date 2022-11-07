@@ -38,3 +38,10 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.pagination .selected {
+  background-color: red;
+}
+.pagination button {
+  margin-right: 10px;
+}
